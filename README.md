@@ -7,10 +7,11 @@
 
 ### *A dual-mode mobile data speed tester for content-based packages and general mobile data, using CDN-level servers for accurate results.*
 
-## 🖼️ App Logo  
+ 
 <p align="center">
-  <img src="assets/app_logo.png" width="150" alt="App Logo">
+  <img src="assets/app_logo.jpg" width="150" alt="App Logo">
 </p>
+
 ---
 
 ## 📦 Download APK  
@@ -117,12 +118,12 @@ Measures:
 ## 📸 Screenshots  
 ### **Home Screen**
 <p align="center">
-  <img src="assets/ss_1.png" width="300" alt="Home Screen">
+  <img src="assets/ss_1.jpg" width="300" alt="Home Screen">
 </p>
 
 ### **Results Screen**
 <p align="center">
-  <img src="assets/ss_2.png" width="300" alt="Results Screen">
+  <img src="assets/ss_2.jpg" width="300" alt="Results Screen">
 </p>
 
 ---
