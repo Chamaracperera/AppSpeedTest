@@ -9,7 +9,7 @@
 
  
 <p align="center">
-  <img src="assets/app_logo.jpg" width="150" alt="App Logo">
+  <img src="asset/app_logo.jpg" width="150" alt="App Logo">
 </p>
 
 ---
@@ -118,12 +118,12 @@ Measures:
 ## 📸 Screenshots  
 ### **Home Screen**
 <p align="center">
-  <img src="assets/ss_1.jpg" width="300" alt="Home Screen">
+  <img src="asset/ss_1.jpg" width="300" alt="Home Screen">
 </p>
 
 ### **Results Screen**
 <p align="center">
-  <img src="assets/ss_2.jpg" width="300" alt="Results Screen">
+  <img src="asset/ss_2.jpg" width="300" alt="Results Screen">
 </p>
 
 ---
