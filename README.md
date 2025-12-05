@@ -7,7 +7,16 @@
 
 ### *A dual-mode mobile data speed tester for content-based packages and general mobile data, using CDN-level servers for accurate results.*
 
+## 🖼️ App Logo  
+<p align="center">
+  <img src="assets/app_logo.png" width="150" alt="App Logo">
+</p>
 ---
+
+## 📦 Download APK  
+You can download the latest release here:  
+👉 [**Download Mobile Data Speed Tester APK**](https://your-link-here.com)
+
 
 ## 🚀 Test Modes
 
@@ -106,12 +115,21 @@ Measures:
 ---
 
 ## 📸 Screenshots  
-*(Add your screenshots here)*
+### **Home Screen**
+<p align="center">
+  <img src="assets/ss_1.png" width="300" alt="Home Screen">
+</p>
+
+### **Results Screen**
+<p align="center">
+  <img src="assets/ss_2.png" width="300" alt="Results Screen">
+</p>
 
 ---
 
 ## 📜 License  
-MIT License
+This project is licensed under the MIT License.  
+© 2025 Chamara Perera
 
 ---
 
