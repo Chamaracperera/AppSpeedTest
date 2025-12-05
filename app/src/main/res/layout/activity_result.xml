@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/resultTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Speed Test Result"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:paddingBottom="20dp"/>
+
+        <!-- Service Icon (Optional - you can add this dynamically) -->
+        <ImageView
+            android:id="@+id/serviceIcon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="Service Icon"
+            android:visibility="gone"/>
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginBottom="20dp"
+            android:indeterminate="true"
+            android:progressTint="@android:color/white"
+            android:visibility="visible"/>
+
+        <!-- Result Card Container -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:elevation="8dp"
+            android:backgroundTint="#80FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Result Text -->
+                <TextView
+                    android:id="@+id/resultText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Initializing test..."
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="4dp"
+                    android:gravity="center"/>
+
+                <!-- Individual Result Cards (will be visible after test) -->
+                <LinearLayout
+                    android:id="@+id/detailedResultsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone">
+
+                    <!-- Ping Result -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:background="@drawable/result_item_bg"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="📡 Ping"
+                            android:textSize="16sp"
+                            android:textColor="#333333"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/pingValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-- ms"
+                            android:textSize="18sp"
+                            android:textColor="#4CAF50"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <!-- Download Result -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:background="@drawable/result_item_bg"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="⬇️ Download"
+                            android:textSize="16sp"
+                            android:textColor="#333333"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/downloadValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-- Mbps"
+                            android:textSize="18sp"
+                            android:textColor="#2196F3"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <!-- Upload Result -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:background="@drawable/result_item_bg"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="⬆️ Upload"
+                            android:textSize="16sp"
+                            android:textColor="#333333"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/uploadValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-- Mbps"
+                            android:textSize="18sp"
+                            android:textColor="#FF9800"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <!-- Jitter Result (for general test) -->
+                    <LinearLayout
+                        android:id="@+id/jitterContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:background="@drawable/result_item_bg"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="📊 Jitter"
+                            android:textSize="16sp"
+                            android:textColor="#333333"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/jitterValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-- ms"
+                            android:textSize="18sp"
+                            android:textColor="#9C27B0"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <!-- Quality Rating -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/result_item_bg"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Connection Quality"
+                            android:textSize="14sp"
+                            android:textColor="#666666"
+                            android:paddingBottom="8dp"/>
+
+                        <TextView
+                            android:id="@+id/qualityRating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⭐⭐⭐⭐⭐"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="#FFC107"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:gravity="center">
+
+            <!-- Retry Button -->
+            <Button
+                android:id="@+id/retryButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Test Again"
+                android:textColor="@android:color/white"
+                android:background="@drawable/btn_gradient"
+                android:padding="12dp"
+                android:visibility="gone"/>
+
+            <!-- Back Button -->
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="Back"
+                android:textColor="@android:color/white"
+                android:background="@drawable/btn_gradient"
+                android:padding="12dp"/>
+
+        </LinearLayout>
+
+        <!-- Test Info Footer -->
+        <TextView
+            android:id="@+id/testInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Test conducted on WiFi/4G"
+            android:textColor="#CCFFFFFF"
+            android:textSize="12sp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</ScrollView>

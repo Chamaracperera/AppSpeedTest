@@ -1,0 +1,270 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp"
+        tools:context=".MainActivity">
+
+        <!-- App Title -->
+
+        <!-- ISP Display -->
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:text="Speed Tester"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ispText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ISP: --"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:paddingBottom="70dp"/>
+
+        <!-- Test Type Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Test Type"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="15dp" />
+
+        <RadioGroup
+            android:id="@+id/testTypeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingBottom="20dp">
+
+            <RadioButton
+                android:id="@+id/radioContentTest"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Content Test"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:checked="true"
+                android:buttonTint="@android:color/white"
+                android:padding="10dp"/>
+
+            <RadioButton
+                android:id="@+id/radioGeneralTest"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="General Test"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:buttonTint="@android:color/white"
+                android:padding="10dp"/>
+
+        </RadioGroup>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#4DFFFFFF"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- App selection label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select App to Test"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:paddingBottom="10dp" />
+
+        <!-- Dropdown Spinner -->
+        <Spinner
+            android:id="@+id/serviceSpinner"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:spinnerMode="dropdown"
+            android:background="@drawable/btn_gradient"
+            android:padding="10dp"
+            android:dropDownWidth="match_parent"
+            android:popupBackground="@android:color/white"/>
+
+        <!-- Preview icons (for style) -->
+        <LinearLayout
+            android:id="@+id/iconsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="5"
+            android:paddingBottom="20dp">
+
+            <!-- WhatsApp -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_whatsapp"
+                    android:contentDescription="WhatsApp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WhatsApp"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+            <!-- Facebook -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_facebook"
+                    android:contentDescription="Facebook" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Facebook"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+            <!-- YouTube -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_instagram"
+                    android:contentDescription="YouTube" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Instagram"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+            <!-- TikTok -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_tiktok"
+                    android:contentDescription="TikTok" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TikTok"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+            <!-- YouTube -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_youtube"
+                    android:contentDescription="YouTube" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="YouTube"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Start Content Test Button -->
+        <Button
+            android:id="@+id/startTestBtn"
+            android:layout_width="220dp"
+            android:layout_height="60dp"
+            android:text="Start Content Test"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/btn_gradient"
+            android:layout_marginTop="10dp"
+            android:elevation="6dp"
+            android:visibility="visible"/>
+
+        <!-- Start General Test Button -->
+        <Button
+            android:id="@+id/generalTestBtn"
+            android:layout_width="220dp"
+            android:layout_height="60dp"
+            android:text="Start General Test"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/btn_gradient"
+            android:layout_marginTop="10dp"
+            android:elevation="6dp"
+            android:visibility="gone"/>
+
+        <!-- Info Text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Content Test: Tests specific app speeds\nGeneral Test: Tests overall mobile data speed"
+            android:textColor="#CCFFFFFF"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:paddingTop="30dp"
+            android:lineSpacingExtra="2dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

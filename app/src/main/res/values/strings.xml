@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AppSpeedTest</string>
+    <string-array name="service_list">
+        <item>WhatsApp</item>
+        <item>Facebook</item>
+        <item>TikTok</item>
+        <item>YouTube</item>
+    </string-array>
+
+</resources>
