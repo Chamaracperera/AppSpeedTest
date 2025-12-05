@@ -16,7 +16,7 @@
 
 ## 📦 Download APK  
 You can download the latest release here:  
-👉 [**Download Mobile Data Speed Tester APK**]([https://your-link-here.com](https://github.com/Chamaracperera/AppSpeedTest/blob/66f32e5e44e316366a5bc4966d3a044a6617bd5f/assets/App%20Speed%20Test.apk))
+👉 [**Download Mobile Data Speed Tester APK**](https://github.com/Chamaracperera/AppSpeedTest/blob/66f32e5e44e316366a5bc4966d3a044a6617bd5f/assets/App%20Speed%20Test.apk)
 
 
 ## 🚀 Test Modes
