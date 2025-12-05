@@ -127,6 +127,9 @@ Measures:
 </p>
 
 ---
+## 🤝 Contributing
+
+Pull requests are welcome! Feel free to **fork** the repository and submit improvements. 😃
 
 ## 📜 License  
 This project is licensed under the MIT License.  
