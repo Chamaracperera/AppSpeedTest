@@ -9,14 +9,14 @@
 
  
 <p align="center">
-  <img src="assets/app_logo.jpg" width="150" alt="App Logo">
+  <img src="assets/logo.jpg" width="150" alt="App Logo">
 </p>
 
 ---
 
 ## 📦 Download APK  
 You can download the latest release here:  
-👉 [**Download Mobile Data Speed Tester APK**](https://your-link-here.com)
+👉 [**Download Mobile Data Speed Tester APK**]([https://your-link-here.com](https://github.com/Chamaracperera/AppSpeedTest/blob/66f32e5e44e316366a5bc4966d3a044a6617bd5f/assets/App%20Speed%20Test.apk))
 
 
 ## 🚀 Test Modes
